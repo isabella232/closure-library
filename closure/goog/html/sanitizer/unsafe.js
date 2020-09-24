@@ -46,7 +46,6 @@ goog.requireType('goog.html.sanitizer.HtmlSanitizerAttributePolicy');
  */
 goog.html.sanitizer.unsafe.alsoAllowTags = function(
     justification, builder, tags) {
-  'use strict';
   goog.asserts.assertString(
       goog.string.Const.unwrap(justification), 'must provide justification');
   goog.asserts.assert(
@@ -84,7 +83,6 @@ goog.html.sanitizer.unsafe.alsoAllowTags = function(
  */
 goog.html.sanitizer.unsafe.alsoAllowAttributes = function(
     justification, builder, attrs) {
-  'use strict';
   goog.asserts.assertString(
       goog.string.Const.unwrap(justification), 'must provide justification');
   goog.asserts.assert(

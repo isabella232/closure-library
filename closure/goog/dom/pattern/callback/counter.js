@@ -18,7 +18,6 @@ goog.provide('goog.dom.pattern.callback.Counter');
  * @final
  */
 goog.dom.pattern.callback.Counter = function() {
-  'use strict';
   /**
    * The count of objects matched so far.
    *
@@ -42,10 +41,8 @@ goog.dom.pattern.callback.Counter = function() {
  * @return {!Function} A callback function.
  */
 goog.dom.pattern.callback.Counter.prototype.getCallback = function() {
-  'use strict';
   if (!this.callback_) {
     this.callback_ = goog.bind(function() {
-      'use strict';
       this.count++;
       return false;
     }, this);
@@ -58,6 +55,5 @@ goog.dom.pattern.callback.Counter.prototype.getCallback = function() {
  * Reset the counter.
  */
 goog.dom.pattern.callback.Counter.prototype.reset = function() {
-  'use strict';
   this.count = 0;
 };

@@ -24,10 +24,8 @@ goog.provide('goog.messaging.testdata.portchannel_worker');
 goog.require('goog.messaging.PortChannel');
 
 function registerPing(channel) {
-  channel.registerService('ping', function(msg) {
-    'use strict';
-    channel.send('pong', msg);
-  }, true);
+  channel.registerService(
+      'ping', function(msg) { channel.send('pong', msg); }, true);
 }
 
 function startListening() {
@@ -35,7 +33,6 @@ function startListening() {
   registerPing(channel);
 
   channel.registerService('addPort', function(port) {
-    'use strict';
     port.start();
     registerPing(new goog.messaging.PortChannel(port));
   }, true);

@@ -36,7 +36,6 @@ goog.a11y.aria.DefaultStateValueMap_;
  *      The names for each of the notification methods.
  */
 goog.a11y.aria.datatables.getDefaultValuesMap = function() {
-  'use strict';
   if (!goog.a11y.aria.DefaultStateValueMap_) {
     goog.a11y.aria.DefaultStateValueMap_ = goog.object.create(
         goog.a11y.aria.State.ATOMIC, false, goog.a11y.aria.State.AUTOCOMPLETE,
